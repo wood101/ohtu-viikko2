@@ -4,17 +4,10 @@ public class Pankki implements Tilisiirto {
 
     private static Pankki instanssi;
 
-    public static Pankki getInstance() {
-        if (instanssi == null) {
-            instanssi = new Pankki();
-        }
+    private Kirjanpitaja kirjanpito;
 
-        return instanssi;
-    }
-    private Kirjanpito kirjanpito;
-
-    public Pankki() {
-        kirjanpito = Kirjanpito.getInstance();
+    public Pankki(Kirjanpitaja kirjanpito) {
+        this.kirjanpito = kirjanpito;
     }
 
     @Override
